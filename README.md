@@ -40,6 +40,6 @@ Download it as a zip
 
 1.5 Do step 1.1; 1.2; 2; 3; 4
 
-1.6 Then go to the public folder and server.js file in the zip and move it from the zip to your new empty file
+1.6 Then go to the Zip folder and get the public folder and server.js file and move it from the zip to your new empty file
 
 Continue from step 5

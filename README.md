@@ -10,7 +10,7 @@ npm install
 npm init -y
 
 4. Type in the terminal: 
-npm install puppeteer
+npm install express puppeteer
 
 5. Run the Server.Js
 
@@ -43,3 +43,4 @@ Download it as a zip
 1.6 Then go to the Zip folder and get the public folder and server.js file and move it from the zip to your new empty file
 
 Continue from step 5
+

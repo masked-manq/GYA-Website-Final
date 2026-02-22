@@ -1,3 +1,7 @@
+!!!De har förändrat evenemang sidan på sollentunas kommunal hemsida så en av de funkar inte längre men du kan se enligt bilder att det funkade då!!!
+
+---------------------------------------------------------------------------------------
+
 In order to get this function youll have to jump through a few hoops.
 
 1. Youll have to download Node.js: 
@@ -44,3 +48,6 @@ Download it as a zip
 
 Continue from step 5
 
+---------------------------------------------------------------------------------------
+
+!!!De har förändrat evenemang sidan så sollentuna så en av de funkar inte längre men du kan se enligt bilder att det funkade då!!!

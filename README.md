@@ -31,3 +31,15 @@ Y
 
 Continue from step 2
 
+---------------------------------------------------------------------------------------
+
+1.3 If it still doesnt work:
+Download it as a zip
+
+1.4 Open a new empty folder
+
+1.5 Do step 1.1; 1.2; 2; 3; 4
+
+1.6 Then go to the public folder and server.js file in the zip and move it from the zip to your new empty file
+
+Continue from step 5

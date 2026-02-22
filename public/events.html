@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Calendar - Sollentuna</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">📅 Sollentuna Events</a>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html" class="active">Sollentuna Events</a></li>
+                    <li><a href="taby-events.html">Täby Events</a></li>
+                    <li><a href="vasby-events.html">Upplands Väsby Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+
+
+
+    <main class="main-content">
+        <div class="events-header">
+
+            <h1>📅 Events Calendar</h1>
+            <p>Discover events in Sollentuna</p>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Event Type:</label>
+                    <select id="typeFilter">
+                        <option value="all">All Events</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Date Range:</label>
+                    <input type="date" id="startDate">
+                    <span>to</span>
+                    <input type="date" id="endDate">
+                </div>
+
+                <button class="btn" id="applyFilters">Apply Filters</button>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="events-layout">
+
+            <div class="events-sidebar" id="sidebar">
+                <div class="loading">Loading events...</div>
+            </div>
+
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+            <p>&copy; 2024 Sollentuna Events. All rights reserved.</p>
+        </div>
+        
+    </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="js/main.js"></script>

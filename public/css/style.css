@@ -1,0 +1,980 @@
+/*--------------------------------------------------BASE CSS STUFFS-------------------------- */
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --muted: #64748b;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+  --gap: 1rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --muted: #94a3b8;
+  --accent: #60a5fa;
+  --accent-hover: #3b82f6;
+  --text: #f1f5f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text, #0f172a);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.site-header {
+  background: var(--card);
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text, #0f172a);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover)), dimgray;
+  background-color: solid dimgray;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: var(--accent);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--card);
+  padding: 2rem 1rem;
+  margin-top: auto;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+.going-counter {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+}
+
+.going-counter:hover {
+    background: #e0f2fe;
+    transform: translateY(-1px);
+}
+
+.going-count {
+    font-weight: bold;
+    color: #0369a1;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .site-nav ul {
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/*--------------------------------------------------BASE CSS STUFFS END-------------------------- */
+
+
+
+
+
+
+
+/*---------------------------------TÄBY EVENTS--------------------------------*/
+
+        .events-header {
+            background: var(--card);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        select, input, button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: white;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+        }
+
+        .events-layout {
+            display: flex;
+            gap: 2rem;
+            height: 70vh;
+        }
+
+        @media (max-width: 768px) {
+            .events-layout {
+                flex-direction: column;
+                height: auto;
+            }
+        }
+
+        .events-sidebar {
+            width: 400px;
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 1rem;
+            overflow-y: auto;
+            border: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 768px) {
+            .events-sidebar {
+                width: 100%;
+                max-height: 50vh;
+            }
+        }
+
+        .map-container {
+            flex: 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+            min-height: 400px;
+        }
+
+        /* Collapsible styles */
+        .collapsible {
+            background: var(--card);
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius);
+            padding: 1rem;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .collapsible:hover {
+            background: #f8fafc;
+            border-color: var(--accent);
+        }
+
+        .collapsible::after {
+            content: '▶';
+            transition: transform 0.2s;
+        }
+
+        .collapsible.active::after {
+            transform: rotate(90deg);
+        }
+
+        .content {
+            display: none;
+            padding: 0.5rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--accent);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: #1e293b;
+        }
+
+        .card p {
+            font-size: 0.875rem;
+            color: var(--muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: #e0f2fe;
+            color: #0369a1;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .no-events {
+            text-align: center;
+            padding: 2rem;
+            color: var(--muted);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--muted);
+        }
+        
+        .taby-badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+/*---------------------------------TÄBY EVENTS END--------------------------------*/
+
+
+
+
+
+
+
+
+
+/*----------------------------------------SOLLENTUNA EVENTS--------------------------------*/
+
+
+        .events-header {
+            background: var(--card);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        select, input, button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: white;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+        }
+
+        .events-layout {
+            display: flex;
+            gap: 2rem;
+            height: 70vh;
+        }
+
+        @media (max-width: 768px) {
+            .events-layout {
+                flex-direction: column;
+                height: auto;
+            }
+        }
+
+        .events-sidebar {
+            width: 400px;
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 1rem;
+            overflow-y: auto;
+            border: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 768px) {
+            .events-sidebar {
+                width: 100%;
+                max-height: 50vh;
+            }
+        }
+
+        .map-container {
+            flex: 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+            min-height: 400px;
+        }
+
+        /* Collapsible styles */
+        .collapsible {
+            background: var(--card);
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius);
+            padding: 1rem;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .collapsible:hover {
+            background: #f8fafc;
+            border-color: var(--accent);
+        }
+
+        .collapsible::after {
+            content: '▶';
+            transition: transform 0.2s;
+        }
+
+        .collapsible.active::after {
+            transform: rotate(90deg);
+        }
+
+        .content {
+            display: none;
+            padding: 0.5rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--accent);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: #1e293b;
+        }
+
+        .card p {
+            font-size: 0.875rem;
+            color: var(--muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: #e0f2fe;
+            color: #0369a1;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .no-events {
+            text-align: center;
+            padding: 2rem;
+            color: var(--muted);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--muted);
+        }
+
+/*----------------------------------------SOLLENTUNA EVENTS END--------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------CONTACT-------------------------------*/
+
+        .contact-hero {
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .contact-info {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-details li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: var(--radius);
+            border-left: 3px solid var(--accent);
+        }
+
+        .contact-details .icon {
+            font-size: 1.25rem;
+            margin-right: 1rem;
+            color: var(--accent);
+        }
+
+        .contact-details .text h4 {
+            margin: 0 0 0.25rem 0;
+            color: #1e293b;
+            font-size: 0.9rem;
+        }
+
+        .contact-details .text p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.875rem;
+        }
+
+        .contact-form {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        .success-message {
+            display: none;
+            background: #10b981;
+            color: white;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+/*----------------------------------------CONTACT END-------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------ABOUT---------------------------*/
+
+        .about-hero {
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .mission-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .mission-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .mission-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #374151;
+        }
+
+        .mission-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-image {
+            background: #f8fafc;
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            border: 2px dashed #cbd5e1;
+        }
+
+
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-image {
+            width: 120px;
+            height: 120px;
+            background: #e2e8f0;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-style: italic;
+            border: 3px solid var(--accent);
+        }
+
+        .team-card h3 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-card .role {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--accent);
+        }
+
+        .value-card h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .value-card p {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .stats {
+            background: var(--card);
+            padding: 3rem;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+/*-----------------------------------------ABOUT OVER---------------------------*/
+
+
+/*---------------------------------UPPLANDS VÄSBY EVENTS--------------------------------*/
+
+.vasby-badge {
+    display: inline-block;
+    background: #8b5cf6;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
